@@ -1,0 +1,13 @@
+{
+	"server" : "",
+	"server_port" : "",
+	"local_address":"0.0.0.0",
+	"local_port" : "1080",
+	"password" : "",
+	"timeout" : "120",
+	"method" : "chacha20-ietf",
+	"protocol" : "origin",
+	"protocol_param" : "",
+	"obfs" : "plain",
+	"obfs_param" : ""
+}
