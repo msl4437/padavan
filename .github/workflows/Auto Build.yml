@@ -32,10 +32,9 @@ jobs:
         TNAME: PSG1218_nano1
       run: |
         cd /opt/rt-n56u/trunk
-        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> /opt/rt-n56u/trunk/configs/templates/PSG1218_nano.config
-        #wget https://github.com/msl4437/padavan/raw/master/PSG1218_nano.config -O /opt/rt-n56u/trunk/configs/templates/PSG1218_nano1.config
+        wget https://github.com/msl4437/padavan/raw/master/PSG1218_nano.config -O /opt/rt-n56u/trunk/configs/templates/PSG1218_nano1.config
         ./clear_tree
-        fakeroot ./build_firmware_modify PSG1218_nano
+        fakeroot ./build_firmware_modify $TNAME
         sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
       uses: actions/upload-artifact@master
